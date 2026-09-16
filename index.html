@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jugnu's Salon | Luxury Makeup & Hair Studio | New City Phase 2, Wah Cantt</title>
+  <meta name="description" content="Book online at Jugnu's Salon New City Phase 2 Arcade, Wah Cantt. Premier bridal makeup, party makeup, precision haircuts, keratin, facial treatments, and live time slot availability.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span><i class="fa-solid fa-location-dot"></i> New City Phase 2 Arcade, Wah Cantt</span>
+      <span><i class="fa-solid fa-clock"></i> Open Daily: 10:00 AM - 8:00 PM</span>
+      <a href="https://wa.me/923329555522" target="_blank" class="top-wa"><i class="fa-brands fa-whatsapp"></i> 0332-9555522</a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <span class="brand-title">JUGNU'S</span>
+        <span class="brand-sub">SALON & MAKEUP STUDIO</span>
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services & Pricing</a></li>
+        <li><a href="#booking" class="nav-link">Book Slot</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary" onclick="scrollToBooking()">
+          <i class="fa-solid fa-calendar-check"></i> Book Appointment
+        </button>
+        <button class="staff-toggle-btn" id="staffPortalBtn" title="Toggle Staff Booking View">
+          <i class="fa-solid fa-user-gear"></i> Staff View
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-star"></i> Top Rated Salon in New City Phase 2
+      </div>
+      <h1 class="hero-title">Refine Your Beauty,<br><span class="text-gold">Define Your Confidence.</span></h1>
+      <p class="hero-desc">
+        Welcome to <strong>Jugnu's Salon</strong> — New City Phase 2 Arcade, Wah Cantt. Experience world-class bridal makeup artistry, precision haircutting, protein hair treatments, and glowing skin pampering.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn btn-gold btn-lg" onclick="scrollToBooking()">
+          <i class="fa-solid fa-clock"></i> Check Live Time Slots
+        </button>
+        <a href="#services" class="btn btn-outline btn-lg">
+          <i class="fa-solid fa-list"></i> View Services Menu
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-number">4.9 ★</span>
+          <span class="stat-label">Client Rating</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Hygienic & Sanitized</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">0332-9555522</span>
+          <span class="stat-label">WhatsApp Helpline</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notice Banner for Live Availability -->
+  <div class="availability-strip">
+    <div class="container strip-content">
+      <div class="strip-item"><i class="fa-solid fa-bolt text-gold"></i> <strong>Live Slot System:</strong> Real-time available dates & time slots below.</div>
+      <div class="strip-item"><i class="fa-solid fa-shield-halved text-gold"></i> Instant WhatsApp Booking Receipt Confirmation</div>
+    </div>
+  </div>
+
+  <!-- Services & Pricing Section -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">OUR EXCLUSIVE MENU</span>
+        <h2 class="section-title">Beauty & Styling Services</h2>
+        <p class="section-desc">Select any service to add directly into your live slot booking itinerary.</p>
+      </div>
+
+      <!-- Service Category Tabs -->
+      <div class="tabs-wrapper">
+        <button class="tab-btn active" data-tab="all">All Services</button>
+        <button class="tab-btn" data-tab="makeup">Makeup Artistry</button>
+        <button class="tab-btn" data-tab="hair">Hair Cutting & Care</button>
+        <button class="tab-btn" data-tab="skin">Skin & Facials</button>
+        <button class="tab-btn" data-tab="bridal">Bridal Packages</button>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="services-grid" id="servicesGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Date & Slot Booking System Section -->
+  <section class="section booking-section" id="booking">
+    <div class="container">
+      <div class="booking-card-wrapper">
+        
+        <div class="booking-header">
+          <div class="header-tag">ONLINE APPOINTMENT ENGINE</div>
+          <h2>Select Date & Book Time Slot</h2>
+          <p>Choose your desired date to see live morning, afternoon, and evening availability at Jugnu's Salon New City Phase 2.</p>
+        </div>
+
+        <div class="booking-grid">
+          
+          <!-- Column 1: Date & Service Selection -->
+          <div class="booking-col">
+            <h3 class="col-title"><i class="fa-solid fa-1"></i> Choose Date & Service</h3>
+            
+            <div class="form-group">
+              <label for="bookingDate"><i class="fa-regular fa-calendar"></i> Select Date:</label>
+              <input type="date" id="bookingDate" class="form-input">
+            </div>
+
+            <div class="selected-services-box">
+              <label><i class="fa-solid fa-scissors"></i> Selected Services:</label>
+              <div id="selectedServicesList" class="selected-list">
+                <p class="placeholder-text">No service selected yet. Click "Add to Booking" from services menu or pick below.</p>
+              </div>
+              <button class="btn btn-sm btn-outline mt-2" onclick="openQuickServicePicker()">
+                <i class="fa-solid fa-plus"></i> Select / Change Services
+              </button>
+            </div>
+
+            <div class="price-summary-box mt-3">
+              <div class="summary-row">
+                <span>Estimated Duration:</span>
+                <strong id="totalDurationText">0 min</strong>
+              </div>
+              <div class="summary-row total-row">
+                <span>Total Amount:</span>
+                <strong id="totalPriceText" class="text-gold">PKR 0</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Slot Availability Picker -->
+          <div class="booking-col">
+            <h3 class="col-title"><i class="fa-solid fa-2"></i> Pick Available Time Slot</h3>
+            <div class="date-display-badge" id="selectedDateBadge">
+              Showing availability for: <span>Today</span>
+            </div>
+
+            <div class="slots-container">
+              
+              <!-- Morning Slots -->
+              <div class="slot-group">
+                <div class="slot-group-title"><i class="fa-solid fa-sun text-gold"></i> Morning Slots (10:00 AM - 1:00 PM)</div>
+                <div class="slots-grid" id="morningSlots"></div>
+              </div>
+
+              <!-- Afternoon Slots -->
+              <div class="slot-group mt-3">
+                <div class="slot-group-title"><i class="fa-solid fa-cloud-sun text-gold"></i> Afternoon Slots (1:00 PM - 5:00 PM)</div>
+                <div class="slots-grid" id="afternoonSlots"></div>
+              </div>
+
+              <!-- Evening Slots -->
+              <div class="slot-group mt-3">
+                <div class="slot-group-title"><i class="fa-solid fa-moon text-gold"></i> Evening Slots (5:00 PM - 8:00 PM)</div>
+                <div class="slots-grid" id="eveningSlots"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Column 3: Client Details & Finalize -->
+          <div class="booking-col">
+            <h3 class="col-title"><i class="fa-solid fa-3"></i> Client Details & Confirm</h3>
+            
+            <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+              <div class="form-group">
+                <label for="clientName">Your Full Name *</label>
+                <input type="text" id="clientName" class="form-input" placeholder="e.g. Ayesha Khan" required>
+              </div>
+
+              <div class="form-group">
+                <label for="clientPhone">WhatsApp / Mobile Number *</label>
+                <input type="tel" id="clientPhone" class="form-input" placeholder="e.g. 0300 1234567" required>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredStylist">Preferred Stylist (Optional)</label>
+                <select id="preferredStylist" class="form-input">
+                  <option value="Any Stylist">Any Available Senior Stylist</option>
+                  <option value="Senior Makeup Artist">Senior Makeup Specialist</option>
+                  <option value="Senior Hair Stylist">Senior Hair Specialist</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="specialNotes">Special Requests / Notes</label>
+                <textarea id="specialNotes" class="form-input" rows="2" placeholder="e.g. Sensitive skin, bridal theme preferences..."></textarea>
+              </div>
+
+              <div class="slot-confirmation-box" id="slotConfirmationSummary">
+                <i class="fa-solid fa-circle-info"></i> Please select a time slot from column 2 to proceed.
+              </div>
+
+              <button type="submit" id="submitBookingBtn" class="btn btn-gold btn-block btn-lg mt-3" disabled>
+                <i class="fa-solid fa-check-circle"></i> Complete Slot Booking
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Staff Portal Modal (Admin / Salon Manager View) -->
+  <div class="modal-backdrop" id="staffModal">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-user-gear text-gold"></i> Jugnu's Salon - Staff Booking Manager</h3>
+        <button class="modal-close" onclick="closeStaffModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="admin-toolbar">
+          <span>Manage client bookings saved locally for New City Phase 2 branch.</span>
+          <button class="btn btn-sm btn-outline" onclick="clearAllBookings()"><i class="fa-solid fa-trash"></i> Clear All Bookings</button>
+        </div>
+        <div class="table-responsive mt-3">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Booking ID</th>
+                <th>Client Name</th>
+                <th>Phone</th>
+                <th>Date & Time Slot</th>
+                <th>Services</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="adminBookingsTable">
+              <!-- Rendered via app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Service Selector Modal -->
+  <div class="modal-backdrop" id="servicePickerModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Select Salon Services</h3>
+        <button class="modal-close" onclick="closeServicePickerModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="pickerModalList">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-gold btn-block" onclick="closeServicePickerModal()">Done Selecting</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Receipt Confirmation Modal -->
+  <div class="modal-backdrop" id="receiptModal">
+    <div class="modal-box modal-receipt">
+      <div class="receipt-header">
+        <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h2>Booking Slot Reserved!</h2>
+        <p>Your appointment slot at <strong>Jugnu's Salon New City Phase 2</strong> has been logged.</p>
+      </div>
+      <div class="receipt-body" id="receiptContent">
+        <!-- Dynamic content -->
+      </div>
+      <div class="receipt-footer">
+        <a id="whatsappConfirmBtn" href="#" target="_blank" class="btn btn-whatsapp btn-block btn-lg">
+          <i class="fa-brands fa-whatsapp"></i> Send Booking Confirmation to Salon WhatsApp
+        </a>
+        <button class="btn btn-outline btn-block mt-2" onclick="closeReceiptModal()">Close & Return</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">PORTFOLIO & WORK</span>
+        <h2 class="section-title">Our Transformations</h2>
+        <p class="section-desc">Sneak peek into our signature makeup looks, precision haircuts, and client glow ups.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder bridal-bg">
+            <span class="gallery-tag">Bridal Look</span>
+          </div>
+          <div class="gallery-info">
+            <h4>Signature Royal Bridal Makeup</h4>
+            <p>Airbrush glow finish with intricate eye detailing.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder hair-bg">
+            <span class="gallery-tag">Hair Styling</span>
+          </div>
+          <div class="gallery-info">
+            <h4>Precision Layered Cut & Blowdry</h4>
+            <p>Volume boosting layers crafted by senior stylists.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder party-bg">
+            <span class="gallery-tag">Party Glam</span>
+          </div>
+          <div class="gallery-info">
+            <h4>Soft Glam Party Makeup</h4>
+            <p>Flawless dewy skin with soft nude smokey eye.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-placeholder treatment-bg">
+            <span class="gallery-tag">Hair Care</span>
+          </div>
+          <div class="gallery-info">
+            <h4>Keratin & Protein Treatment</h4>
+            <p>Silky, frizz-free hair transformation with long-lasting shine.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Reviews Section -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">CLIENT FEEDBACK</span>
+        <h2 class="section-title">What New City Residents Say</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Jugnu's Salon in New City Phase 2 made my bridal day absolutely unforgettable! The makeup was flawless, stayed intact all night, and didn't feel heavy at all. Highly recommended!"</p>
+          <div class="review-author">
+            <strong>Mahnoor Tariq</strong>
+            <span>Bridal Client • New City Phase 2</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Got my layered haircut and hair coloring done here. The staff listened carefully to what I wanted and gave me exactly the look I showed in the picture. Great hygiene and polite behavior!"</p>
+          <div class="review-author">
+            <strong>Sana Zafar</strong>
+            <span>Haircut & Color • Wah Cantt</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"The slot booking on their website makes it so easy. I picked a 4:00 PM slot for party makeup, walked in, and didn't have to wait even 5 minutes. Amazing service!"</p>
+          <div class="review-author">
+            <strong>Komal Bilal</strong>
+            <span>Party Makeup Client</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Map Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card-wrapper">
+        <div class="contact-info">
+          <span class="section-subtitle">VISIT US TODAY</span>
+          <h2>Jugnu's Salon - New City Phase 2</h2>
+          <p>Experience luxury beauty services near your doorstep. Drop by or call us to reserve your appointment.</p>
+
+          <ul class="contact-list">
+            <li>
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Branch Address:</strong>
+                <p>New City Phase 2 Arcade, Main Commercial, Wah Cantt, Pakistan</p>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>Direct Call / WhatsApp:</strong>
+                <p>0332-9555522 / 0336-9752733</p>
+              </div>
+            </li>
+            <li>
+              <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <strong>Salon Timing:</strong>
+                <p>Monday - Sunday: 10:00 AM – 8:00 PM (7 Days a Week)</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact-actions mt-3">
+            <a href="https://wa.me/923329555522" target="_blank" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="tel:03329555522" class="btn btn-outline">
+              <i class="fa-solid fa-phone"></i> Call Salon
+            </a>
+          </div>
+        </div>
+
+        <div class="map-placeholder">
+          <div class="map-box">
+            <i class="fa-solid fa-map-location-dot map-icon"></i>
+            <h3>New City Phase 2 Arcade</h3>
+            <p>Wah Cantt, Punjab</p>
+            <a href="https://maps.google.com/?q=New+City+Phase+2+Wah+Cantt" target="_blank" class="btn btn-gold btn-sm mt-2">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Google Map Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="brand-title">JUGNU'S SALON</span>
+        <p>Premium Beauty, Bridal & Hair Artistry in New City Phase 2 Arcade, Wah Cantt.</p>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Jugnu's Salon. All rights reserved. | Built for New City Phase 2 Branch.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
